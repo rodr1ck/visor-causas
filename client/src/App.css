@@ -1,0 +1,57 @@
+* {
+  margin: 0 auto; 
+}
+
+.App {
+  margin-top: 5%; 
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  border: dashed red;
+}
+
+.header-style {
+  border: dashed blue;
+  font-size: 2rem;
+}
+
+.body-organizer {
+  border: dashed orangered;
+  display: grid;
+  grid-template-columns: 4fr 8fr;
+}
+
+.tabs-style {
+  border: dashed green;
+}
+
+.body-style {
+  border: dashed gray;
+}
+
+.etiqueta {
+  font-size: 1.2rem;
+  background-color: white;
+  padding: .5rem 1rem;
+  border: none;
+  cursor: pointer;
+  transition: .2s;
+  border-bottom: 2px solid blue;
+  margin-bottom: 20px;
+
+}
+
+.etiqueta.selected {
+  background-color: black;
+  color: white;
+  border: 2px solid blue;
+  border-bottom: 0;
+  position: relative;
+  top: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.contenido {
+  padding: 1rem;
+}

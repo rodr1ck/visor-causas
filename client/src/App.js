@@ -13,7 +13,8 @@ const tabDeDatabase = [
 function App() {
   console.log("arrDb: ", arrDd.arrDd.slice(0, 3));
 
-  const arrInsert = arrDd.arrDd.slice(0, 3);
+  //const arrInsert = arrDd.arrDd.slice(0, 3);
+  const arrInsert = arrDd.arrDd;
 
   const onSubmit = async (e) => {
     e.preventDefault()

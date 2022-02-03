@@ -1,10 +1,7 @@
-# Bank Transfers Challenge
+# Visor de Causas de muerte en EEUU 2014-2019
 
-Este proyecto permite realizar transferencias y ver el historial de transferencias.
-Para ello se tiene un formulario de destinatarios. Solo se puede realizar transferencias a destinatarios que han
-sido previamente agregados. Tiene validaciones tanto de frontend como de backend.
-
-![1](https://user-images.githubusercontent.com/29648679/124500793-62589880-dd8e-11eb-82e5-85e30c26064a.PNG)
+Este proyecto permite las diferentes casusas de muerte en Estados Unidos desde 2014 a 2019.
+Permite agregar enfermedades a favoritos, filtrar por año y despliega un grafico y una tabla. 
 
 ## Como ejecutar este proyecto?
 

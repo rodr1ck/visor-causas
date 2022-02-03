@@ -62,3 +62,16 @@ module.exports.updateDeathCause = (request, response) => {
       res.status(400).json(err);
     });
 };
+
+module.exports.getAllIllnesses = (request, response) => {
+  DeathCause.find({})
+    .then((deathcause) => {
+      const arrIllness = deathcause.map((x) => x.illness);
+      const unique = [...new Set(arrIllness)];
+      response.json(unique);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.status(400).json(err);
+    });
+};

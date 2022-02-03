@@ -35,8 +35,8 @@ const Tabs = (props) => {
 
     return (
         <div className="tabs-style">
-            <div ref={padreDeEtiquetas}>{etiquetas}</div>
-            <div className="contenido-de-tabs">{contenido[selecionado]}</div>
+            <div ref={padreDeEtiquetas} style={{display:'flex', justifyContent: 'center'}}>{etiquetas}</div>
+            <div className="contenido-de-tabs" style={{padding:'10px'}}>{contenido[selecionado]}</div>
         </div>
     );
 }

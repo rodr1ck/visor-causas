@@ -6,4 +6,5 @@ module.exports = function (app) {
     app.get('/api/deathcauses/:id', DeathCauseController.getDeathCause)
     app.put('/api/deathcauses/:id', DeathCauseController.updateDeathCause)
     app.delete('/api/deathcauses/:id', DeathCauseController.deleteDeathCause)
+    app.get('/api/illnesses', DeathCauseController.getAllIllnesses)
 }

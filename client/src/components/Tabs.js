@@ -4,9 +4,11 @@ import Etiqueta from './Etiqueta';
 
 const Tabs = (props) => {
 
-    const {tabs} = props
+    const {tabs, arrayEnfermedades} = props
     const [selecionado, setSelecionado] = useState(0);
     const padreDeEtiquetas = useRef();
+
+   // console.log("arrayEnfermedades: ",arrayEnfermedades);
 
     const changeButtonColor = btn => {
         padreDeEtiquetas.current
@@ -30,8 +32,8 @@ const Tabs = (props) => {
     const contenido = tabs.map(({contenido},index) => {
     const isSelected = index === selecionado;
     return <Contenido texto={contenido} index={index} key={index} isSelected={isSelected}/>})
-    console.log({etiquetas})
-    console.log("contenido[selecionado]: ", contenido[selecionado]);
+    //console.log({etiquetas})
+    //console.log("contenido[selecionado]: ", contenido[selecionado]);
 
     return (
         <div className="tabs-style">

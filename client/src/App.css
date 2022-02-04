@@ -1,44 +1,43 @@
 * {
-  margin: 0 auto; 
+  margin: 0 auto;
 }
 
 .App {
-  margin-top: 5%; 
-  display:flex;
+  margin: '5px';
+  display: flex;
   flex-direction: column;
   align-items: center;
-  border: dashed red;
 }
 
 .header-style {
-  border: dashed blue;
   font-size: 2rem;
+  display: flex;
+  justify-content: center;
 }
 
 .body-organizer {
-  border: dashed orangered;
   display: grid;
   grid-template-columns: 4fr 8fr;
+  padding:'2px';
 }
 
 .tabs-style {
-  border: dashed green;
+ padding:'2px';
 }
 
 .body-style {
-  border: dashed gray;
+  padding:'2px';
 }
 
 .etiqueta {
   font-size: 1.2rem;
   background-color: white;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   border: none;
   cursor: pointer;
-  transition: .2s;
+  transition: 0.2s;
   border-bottom: 2px solid blue;
   margin-bottom: 20px;
-
 }
 
 .etiqueta.selected {

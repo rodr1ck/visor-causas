@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Header from "../components/Header";
 import { FaHeart, FaRegHeart } from "react-icons/fa";
 import Body from "../components/Body";
@@ -6,11 +6,12 @@ import Tabs from "../components/Tabs";
 import TextField from "@mui/material/TextField";
 
 const Main = (props) => {
-  const [heart, setHeart] = useState();
   const [enfermedadSeleccionada, setEnfermedadSeleccionada] =
     useState("All Cause");
 
-  const [newArrayIllnesses, setNewArrayIllnesses] = useState(props.illnessesArr);
+  const [newArrayIllnesses, setNewArrayIllnesses] = useState(
+    props.illnessesArr
+  );
 
   const tabDeDatabase = [
     {
@@ -68,23 +69,14 @@ const Main = (props) => {
 
   const onChangeBuscador = (e) => {
     e.preventDefault();
-    console.log("s ", e.target.value);
-
-    //if (e.target.value.length > 0) {
-      console.log("props.illnessesArr: ", props.illnessesArr);
-      const newArrIll = props.illnessesArr.filter((x) =>
-        x.illness.includes(e.target.value)
-      );
-      console.log("newArrIll: ", newArrIll);
-      //props.setIllnessesArr(newArrIll);
-      setNewArrayIllnesses(newArrIll);
-    //}
+    const newArrIll = props.illnessesArr.filter((x) =>
+      x.illness.includes(e.target.value)
+    );
+    setNewArrayIllnesses(newArrIll);
   };
 
   const onClick = (e, x) => {
     e.preventDefault();
-
-    console.log("has presionado el boton", x);
     const newArr = newArrayIllnesses.map((obj) => {
       if (obj.illness == x && obj.heart == false) {
         return { illness: x, heart: true };
@@ -96,16 +88,11 @@ const Main = (props) => {
 
       return obj;
     });
-
-    console.log("newArr: ", newArr);
-
-   // props.setIllnessesArr(newArr);
-   setNewArrayIllnesses(newArr);
+    setNewArrayIllnesses(newArr);
   };
 
   const onClickFavorite = (e, x) => {
     e.preventDefault();
-    console.log("has presionado el boton favorite", x);
     setEnfermedadSeleccionada(x);
   };
 

@@ -3,34 +3,22 @@ import Grid from "@mui/material/Grid";
 import { Typography } from "@mui/material";
 import Box from "@mui/material/Box";
 import InputLabel from "@mui/material/InputLabel";
-import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
-import BarChart from "./BarChart";
-import { FaHeart, FaRegHeart } from "react-icons/fa";
-//import { DataGrid } from "@material-ui/data-grid";
+import { FaHeart} from "react-icons/fa";
 import { DataGrid } from "@material-ui/data-grid";
 import NativeSelect from "@mui/material/NativeSelect";
 import Chart from "react-apexcharts";
 import { fontWeight } from "@mui/system";
 
 const Body = (props) => {
-  const [age, setAge] = useState("Selecciona Año");
-  const [yearFilter, setYearFilter] = useState("");
+  //const [yearFilter, setYearFilter] = useState("");
 
   const [dataChart, setDataChart] = useState(
     props.allData.filter(
       (x) => x.year == 2014 && x.illness == props.illnessSelected
     )
   );
-
-  console.log("dataChart: ", dataChart);
-  console.log("ilness Selected: ", props.illnessSelected);
-  //console.log("All data: ", props.allData);
-
-  /*   const handleChange = (event) => {
-    setAge(event.target.value);
-  }; */
 
   const rows = [
     {
@@ -73,19 +61,15 @@ const Body = (props) => {
   ];
 
   const handleChangeSelect = (event) => {
-    setYearFilter(event.target.value);
-    console.log("cambio año", event.target.value);
+    //setYearFilter(event.target.value);
     const newAll = props.allData.filter(
       (x) => x.year == event.target.value && x.illness == props.illnessSelected
     );
-    console.log("newAll: ", newAll);
     setDataChart(newAll);
   };
 
   const cat = dataChart.map((x) => x.month);
-
   const cases = dataChart.map((x) => x.cases);
-
   const dataTabla = dataChart.map((x, key) => (
     <tr key={key} style={{ fontSize: "1rem"}}>
       <td style={{padding:'1px 5px'}}>{x.month}</td>
@@ -153,7 +137,7 @@ const Body = (props) => {
           xs={12}
           style={{ display: "flex", justifyContent: "center", padding: "20px" }}
         >
-          {/* <BarChart dataChart={dataChart}/> */}
+         
 
           <Chart options={options} series={series} type="bar" width="500" />
         </Grid>

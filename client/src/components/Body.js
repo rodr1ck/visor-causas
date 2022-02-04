@@ -87,9 +87,9 @@ const Body = (props) => {
   const cases = dataChart.map((x) => x.cases);
 
   const dataTabla = dataChart.map((x, key) => (
-    <tr key={key} style={{ fontSize: "1rem" }}>
-      <td>{x.month}</td>
-      <td>{x.cases}</td>
+    <tr key={key} style={{ fontSize: "1rem"}}>
+      <td style={{padding:'1px 5px'}}>{x.month}</td>
+      <td style={{padding:'1px 5px'}}>{x.cases}</td>
     </tr>
   ));
 
@@ -164,8 +164,8 @@ const Body = (props) => {
         >
           <table style={{ border: "1px solid black", padding: "5px" }}>
             <tr style={{ backgroundColor: "gray", color:'white', fontWeight:'bold' }}>
-              <th>Mes</th>
-              <th>Casos</th>
+              <th style={{padding:'2px 5px'}}>Mes</th>
+              <th style={{padding:'2px 5px'}}>Casos</th>
             </tr>
             {dataTabla}
           </table>
